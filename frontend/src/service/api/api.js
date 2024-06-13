@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const instance = axios.create({
-  baseURL: 'https://example.com',
+  baseURL: 'https://mypet.up.railway.app',
 });
 
 export const setToken = token => {
