@@ -1,0 +1,76 @@
+.title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--text-color);
+  margin-bottom: 24px;
+  margin-left: 12px;
+}
+
+.section {
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 8px 16px 8px;
+  border-radius: 40px;
+
+  background-color: var(--white-color);
+  box-shadow: 3px 8px 14px 0px #88c6fd30;
+
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 320px) {
+  .section {
+    width: 280px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .section {
+    width: 458px;
+    padding: 20px 32px;
+    margin-top: 60px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .section {
+    margin-top: 40px;
+  }
+}
+
+.notMyPetstepSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 8px 16px 8px;
+  border-radius: 40px;
+
+  background-color: var(--white-color);
+  box-shadow: 3px 8px 14px 0px #88c6fd30;
+
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
+
+  @media screen and (min-width: 320px) {
+    width: 280px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 704px;
+    padding: 20px 32px;
+    align-items: center;
+    margin-top: 60px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 822px;
+    padding: 20px 74px 29px 74px;
+    margin-top: 40px;
+  }
+}

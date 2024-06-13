@@ -1,0 +1,51 @@
+@media screen and (min-width: 320px) {
+  .bgContainer {
+    background-image: url(../../../assets/images/bg-paws-mobile-1-x-opt.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 448px;
+  }
+}
+
+@media screen and (min-width: 320px),
+  screen and (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi) {
+  .bgContainer {
+    background-image: url(../../../assets/images/bg-paws-mobile-2x-opt.png);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .bgContainer {
+    background-image: url(../../../assets/images/bg-paws-tablet-1x-opt.png);
+    height: 1040px;
+  }
+}
+
+@media screen and (min-width: 768px),
+  screen and (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi) {
+  .bgContainer {
+    background-image: url(../../../assets/images/bg-paws-tablet-2x-opt.png);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .bgContainer {
+    background-image: url(../../../assets/images/bg-paws-desktop-1x-opt.png);
+    height: 100vh;
+    background-position-y: -86px;
+    background-attachment: scroll;
+    width: 1280px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1280px),
+  screen and (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi) {
+  .bgContainer {
+    background-image: url(../../../assets/images/bg-paws-desktop-2x-opt.png);
+  }
+}

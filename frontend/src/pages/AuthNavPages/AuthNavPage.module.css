@@ -1,0 +1,320 @@
+/* Register */
+
+.ContainerForm {
+  margin-top: 40px;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 3px 8px 14px 0px rgba(136, 198, 253, 0.19);
+  
+}
+@media screen and (min-width: 768px) {
+  .ContainerForm {
+  width: 608px;
+  margin-top: 80px;
+  margin-right: auto;
+  margin-left: auto;
+  }
+}
+
+.Form {
+  text-align: center;
+}
+
+
+.ContainerForm__Title {
+  text-align: center;
+  font-family: Manrope;
+  padding-top: 40px;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .ContainerForm__Title{
+  font-size: 36px;
+  padding-top: 60px;
+  margin-bottom: 40px;
+  }
+}
+.ContainerForm__Imput {
+  outline: none;
+  color: var(--grey-color);
+  width: 256px;
+  height: 48px;
+  border-radius: 40px;
+  border: 1px solid var(--blue-color);
+  padding: 12px 16px 12px 16px;
+  margin-bottom: 14px;
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 150%;
+  letter-spacing: 0.64px;
+  list-style: none;
+}
+@media screen and (min-width: 768px) {
+  .ContainerForm__Imput {
+  width: 458px;
+  margin-bottom: 32px;
+  }
+}
+
+.ContainerForm__Imput_Password {
+  border: none;
+  width: 100%;
+  color: var(--grey-color);
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 150%;
+  letter-spacing: 0.64px;
+  outline: none;
+}
+
+.ImputContainer {
+  padding: 12px 16px 12px 16px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  width: 256px;
+  height: 48px;
+  border-radius: 40px;
+  margin-bottom: 14px;
+  border: 1px solid var(--blue-color);
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .ImputContainer {
+  width: 458px;
+  margin-bottom: 32PX;
+  }
+}
+
+.FormRegister__Button {
+  width: 256px;
+  height: 48px;
+  margin-top: 26px;
+  margin-bottom: 8px;
+  padding: 10px 28px;
+  border-radius: 40px;
+  background-color: var(--blue-color);
+  font-family: Manrope;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.8px;
+  color: var(--white-color);
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+@media screen and (min-width: 768px) {
+  .FormRegister__Button {
+  width: 458px;
+  margin-top: 20px;
+  margin-bottom: 16px; 
+  }
+}
+@media screen and (min-width: 1280px) {
+  .FormRegister__Button {
+    margin-top: 8px;
+  }
+}
+.Container_GoogleImg {
+  display: flex;
+}
+
+.FormRegister__Button_Login_Google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 256px;
+    height: 48px;
+    margin-bottom: 8px;
+    padding: 10px 28px;
+    border-radius: 40px;
+    background-color: var(--white-color);
+    font-family: Manrope;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.8px;
+    color: var(--blue-color);
+    border: 1px solid var(--blue-color);
+    cursor: pointer;
+    outline: none;
+}
+@media screen and (min-width: 768px) {
+  .FormRegister__Button_Login_Google {
+    width: 458px;
+  }
+}
+
+.FormRegister__Button:hover,
+.FormRegister__Button:focus {
+  background: var(--gradient-blue);
+}
+.FormRegister__Button_Login_Google:hover,
+.FormRegister__Button_Login_Google:focus {
+  color: var(--white-color);
+  background: var(--gradient-blue);
+}
+
+
+.FormRegister__Button_Login {
+  width: 256px;
+  height: 48px;
+  margin-top: 34px;
+  margin-bottom: 14px;
+  padding: 10px 28px;
+  border-radius: 40px;
+  background-color: var(--blue-color);
+  font-family: Manrope;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.8px;
+  color: var(--white-color);
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+@media screen and (min-width: 768px) {
+  .FormRegister__Button_Login {
+  width: 458px;
+  margin-top: 0px;
+  }
+}
+
+.FormRegister__Button_Login:hover,
+.FormRegister__Button_Login:focus {
+  background: var(--gradient-blue);
+}
+
+
+.FormRegister__Text {
+  text-align: center;
+  font-family: Manrope;
+  font-size: 12px;
+  line-height: normal;
+  letter-spacing: 0.48px;
+  color: var(--grey-color);
+  padding-bottom: 40px;
+  
+}
+
+@media screen and (min-width: 768px) {
+  .FormRegister__Text {
+  padding-bottom: 60px;
+  }
+}
+
+.FormRegister__Link {
+  color: var(--blue-color);
+  font-family: Manrope;
+  font-size: 12px;
+  line-height: normal;
+  letter-spacing: 0.48px;
+  text-decoration-line: underline;
+  margin-left: 2px;
+}
+
+.Button__EyeClosedIcon {
+  display: block;
+  width: 27px;
+  height: 27px;
+  border: none;
+  list-style: none;
+  background-color: white;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+}
+
+.ErrorText {
+ color: red;
+ font-size: 10px;
+ padding-right: 28px;
+ padding-left: 28px;
+ margin-top: 2px;
+ margin-bottom: 2px;
+
+ text-align: initial;
+}
+
+@media screen and (min-width: 768px) {
+  .ErrorText {
+  margin-top: 4px;
+  padding-left: 86px;
+  padding-right: 86px;
+  margin-bottom: 16px;
+  }
+}
+.ErrorTextPassword {
+  color: red;
+  font-size: 10px;
+  padding-right: 28px;
+  padding-left: 28px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  text-align: initial;
+}
+
+ @media screen and (min-width: 768px) {
+  .ErrorTextPassword {
+  margin-top: 4px;
+  padding-left: 86px;
+  padding-right: 86px;
+  margin-bottom: 16px;
+  }
+ }
+
+.ErrorTextInput {
+  outline: none;
+  color: var(--grey-color);
+  width: 256px;
+  height: 48px;
+  border-radius: 40px;
+  border: 1px solid #ff7d87;
+  padding: 12px 16px 12px 16px;
+
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 150%;
+  letter-spacing: 0.64px;
+  list-style: none;
+}
+
+@media screen and (min-width: 768px) {
+  .ErrorTextInput {
+  width: 458px;
+  }
+}
+
+.ErrorPasswordInput {
+  padding: 12px 16px 12px 16px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  width: 256px;
+  height: 48px;
+  border-radius: 40px;
+  border: 1px solid #ff7d87;
+
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .ErrorPasswordInput {
+  width: 458px;
+  }
+}

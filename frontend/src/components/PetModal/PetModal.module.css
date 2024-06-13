@@ -1,0 +1,314 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: grid;
+  place-items: center;
+
+  overflow-y: scroll;
+  cursor: pointer;
+  background: rgba(97, 97, 97, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 999;
+}
+
+.modal {
+  position: relative;
+
+  width: 320px;
+  margin-top: 100px;
+  margin-bottom: 40px;
+  padding: 44px 20px 16px;
+
+  border-radius: 20px;
+  background-color: #fff;
+  cursor: default;
+
+  @media screen and (min-width: 768px) {
+    width: 750px;
+    padding: 32px 32px 24px;
+
+    border-radius: 40px;
+  }
+}
+
+.baseBtn {
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  opacity: 0.75;
+  cursor: pointer;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.closeBtn {
+  composes: baseBtn;
+
+  position: absolute;
+  top: 12px;
+  left: calc(100% - 12px);
+  transform: translate(-100%, 0);
+
+  @media screen and (min-width: 768px) {
+    top: 23px;
+    left: calc(100% - 26px);
+  }
+
+  border-radius: 10px;
+}
+.closeBtn:hover,
+.closeBtn:focus {
+  opacity: 1;
+  box-shadow: rgba(100, 100, 111, 0.2);
+}
+
+/**
+  |============================
+  | Upper
+  |============================
+*/
+
+.upperBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    gap: 24px;
+  }
+}
+
+.thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 262 / 298;
+
+  @media screen and (min-width: 768px) {
+    aspect-ratio: auto;
+    width: 262px;
+    height: 298px;
+  }
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-fit: center;
+  border-radius: 0px 0px 40px 40px;
+}
+
+.category {
+  position: absolute;
+  top: 16px;
+  left: 0;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--unnamed, #111);
+
+  padding: 11px 22px 11px 11px;
+  border-radius: 0px 40px 40px 0px;
+  background-color: #cce4fb;
+}
+
+.afterImage {
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    width: auto;
+  }
+}
+
+.title {
+  font-family: Manrope;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.24px;
+  color: #000;
+
+  @media screen and (min-width: 768px) {
+    max-width: 250px;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.28px;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  margin-top: 20px;
+}
+
+.field {
+  display: grid;
+  grid-template-columns: minmax(0, 80px) auto;
+  gap: 0 40px;
+  margin: 0 auto;
+
+  font-size: 14px;
+  font-weight: 600;
+  line-height: normal;
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+.value {
+  max-width: 300px;
+  overflow: hidden;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+.goldValue {
+  composes: value;
+  color: var(--yellow, #ffc107);
+  text-decoration-line: underline;
+  opacity: 0.75;
+  cursor: pointer;
+}
+.goldValue:hover,
+.goldValue:focus {
+  opacity: 1;
+  color: var(--yellow, #ffc107);
+  text-shadow: rgba(100, 100, 111, 0.2);
+}
+
+/**
+  |============================
+  | Lower
+  |============================
+*/
+
+.lowerBox {
+  margin-top: 28px;
+  width: 100%;
+
+  font-size: 14px;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.56px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.64px;
+  }
+}
+
+.lowerBoxComment {
+  font-weight: 500;
+}
+
+.lowerBtns {
+  margin-top: 12px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    margin-top: 70px;
+    justify-content: flex-end;
+    gap: 17px;
+  }
+}
+
+/* -------------  Add to favorite Button ------------- */
+.addToFavotiteBtn {
+  composes: baseBtn;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 20px;
+
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.64px;
+  color: var(--unnamed, #fef9f9);
+
+  background-color: var(--unnamed, #54adff);
+  border-radius: 40px;
+
+  @media screen and (min-width: 768px) {
+    width: auto;
+  }
+}
+.addToFavotiteBtn:hover,
+.addToFavotiteBtn:focus {
+  opacity: 1;
+  box-shadow: rgba(100, 100, 111, 0.2);
+  background: var(--gr-blue, linear-gradient(315deg, #419ef1 0%, #9bd0ff 100%));
+}
+
+/* -------------  Contact Button ------------- */
+.contactBtn {
+  composes: baseBtn;
+  padding: 9px 30px;
+
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.64px;
+  text-align: center;
+  color: var(--unnamed, #54adff);
+
+  border-radius: 40px;
+  border: 2px solid var(--unnamed, #54adff);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contactBtn:hover,
+.contactBtn:focus {
+  color: var(--unnamed, #fef9f9);
+  opacity: 1;
+  box-shadow: rgba(100, 100, 111, 0.2);
+  background-color: var(--unnamed, #54adff);
+  background: var(--gr-blue, linear-gradient(315deg, #419ef1 0%, #9bd0ff 100%));
+  border: 2px solid transparent;
+}
+
+/* 
+
+
+  @media screen and (min-width: 768px) {
+
+  }
+
+  @media screen and (min-width: 1280px) {
+ 
+  } 
+  
+
+*/

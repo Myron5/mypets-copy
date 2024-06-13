@@ -1,0 +1,61 @@
+.title {
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    width: 280px;
+    padding-top: 40px;
+    margin-bottom: 20px;
+
+    color: var(--text-color);
+    text-align: center;
+    font-family: Manrope;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  @media screen and (min-width: 768px) {
+    width: 260px;
+    padding-top: 80px;
+    margin-bottom: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 48px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 80px;
+    margin-bottom: 60px;
+    margin-right: auto;
+    margin-left: auto;
+    color: var(--text-color);
+    font-family: Manrope;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    text-shadow: var(--box-title-shadow);
+  }
+}
+.friend__list {
+
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 24px;
+    padding-bottom: 75px;
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin-top: 40px;
+    padding-bottom: 172px;
+  }
+   @media screen and (min-width: 1280px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 31px;
+    margin-top: 60px;
+    padding-bottom: 69px;
+  }
+}

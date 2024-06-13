@@ -1,0 +1,19 @@
+.userBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0px;
+
+  width: 30px;
+  height: 30px;
+}
+
+.userBtn:hover,
+.userBtn:focus {
+  border-radius: 50%;
+  border: 1px solid var(--yellow-color);
+}

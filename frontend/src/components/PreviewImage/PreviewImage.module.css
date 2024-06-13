@@ -1,0 +1,23 @@
+.previewPetImg {
+  border-radius: 20px;
+  width: 112px;
+  height: 112px;
+  object-fit: cover;
+
+  @media screen and (min-width: 768px) {
+    width: 182px;
+    height: 182px;
+  }
+}
+
+.previewProfileImg {
+  /* Write styles for profile */
+}
+
+.text {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0.04em;
+  color: var(--white-color);
+}

@@ -1,0 +1,54 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  margin-top: 20px;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: 768px) {
+    gap: 22px;
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-top: 24px;
+    gap: 24px;
+    margin-bottom: 68px;
+  }
+}
+
+.centerBox {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.centerBoxError {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: red;
+}
+
+.noAdsImg {
+  width: 280px;
+}
+
+@media screen and (min-width: 768px) {
+  .noAdsImg {
+    width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .noAdsImg {
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

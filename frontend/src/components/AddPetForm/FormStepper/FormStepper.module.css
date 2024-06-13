@@ -1,0 +1,69 @@
+.stepWrap {
+  display: flex;
+  gap: 12px;
+  
+  @media screen and (min-width: 768px) {
+    gap: 16px;
+    
+  }
+  
+}
+
+.step {
+  position: relative;
+  padding-bottom: 20px;
+  width: 80px;
+
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 0px;
+
+  @media screen and (min-width: 320px) {
+    width: 80px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 120px;
+
+    font-size: 16px;
+    line-height: 27px;
+  }
+}
+
+.step::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 8px;
+  left: 0;
+  bottom: 0;
+  border-radius: 2px;
+  background: #cce4fb;
+}
+
+.current {
+  composes: step;
+  color: #54adff;
+}
+
+.compleated {
+  composes: step;
+  color: #00c3ad;
+}
+
+.next {
+  composes: step;
+  color: #888888;
+}
+
+.current::after {
+  background: #54adff;
+}
+
+.compleated::after {
+  background: #00c3ad;
+}
+
+.next::after {
+  color: #cce4fb;
+}

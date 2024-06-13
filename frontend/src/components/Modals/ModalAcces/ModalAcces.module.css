@@ -1,0 +1,223 @@
+.modalBackdrop {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(81, 81, 81, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  box-shadow: 3px 8px 14px rgba(136, 198, 253, 0.19);
+  border-radius: 20px;
+  text-align: center;
+  align-items: center;
+  width: 280px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 12px 12px 0px 12px;
+
+  @media screen and (min-width: 768px) {
+    width: 608px;
+    height: 352px;
+    border-radius: 40px;
+    padding: 24px 24px 0px 24px;
+  }
+}
+
+.title {
+  margin-bottom: 14px;
+  color: var(--unnamed, #111);
+  text-align: center;
+  font-family: Manrope;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.96px;
+  margin-top: 48px;
+}
+@media screen and (min-width: 768px) {
+  .title {
+    color: #000;
+    font-family: Manrope;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.28px;
+    margin-bottom: 40px;
+  }
+}
+
+.title_span {
+  color: #000;
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.14px;
+}
+
+@media screen and (min-width: 768px) {
+  .title_span {
+    color: #000;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.16px;
+  }
+}
+
+.text {
+  color: #000;
+  text-align: center;
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.14px;
+  margin-bottom: 44px;
+}
+
+@media screen and (min-width: 768px) {
+  .text {
+    color: #000;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.16px;
+    margin-bottom: 48px;
+    width: 393px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .textWrap {
+    height: 393px;
+  }
+}
+
+.button_wrap {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .button_wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 17px;
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  align-self: end;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+
+.del_btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+  gap: 8px;
+
+  background: var(--blue-color);
+  border-radius: 40px;
+  border: transparent;
+
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.38;
+
+  letter-spacing: 0.04em;
+
+  color: var(--background-color);
+  cursor: pointer;
+  width: 256px;
+}
+
+@media screen and (min-width: 768px) {
+  .del_btn {
+    width: 129px;
+  }
+}
+
+.del_btn {
+  --color1: var(--background-color);
+}
+
+.del_btn:hover {
+  background: var(--gr-blue, linear-gradient(315deg, #419ef1 0%, #9bd0ff 100%));
+  color: rgb(253, 247, 242);
+  border: none;
+}
+
+.cancel_btn {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.38;
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.04em;
+
+  background-color: #ffffff;
+
+  display: flex;
+  justify-content: center;
+  padding: 8px 20px;
+  gap: 8px;
+
+  width: 129px;
+  height: 40px;
+
+  color: var(--blue-color);
+  border-radius: 40px;
+  border: 2px solid var(--blue-color);
+  cursor: pointer;
+  width: 256px;
+}
+
+@media screen and (min-width: 768px) {
+  .cancel_btn {
+    width: 129px;
+  }
+}
+
+.cancel_btn:hover {
+  background: var(--gr-blue, linear-gradient(315deg, #419ef1 0%, #9bd0ff 100%));
+  color: rgb(253, 247, 242);
+  border: none;
+}

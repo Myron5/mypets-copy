@@ -1,0 +1,92 @@
+.headerNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.burgerMenuBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  border-color: transparent;
+  padding: 0px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1280px) {
+  .burgerMenuBtn {
+    padding: 0px 16px 0px 16px;
+  }
+}
+
+.burgerOpenNavigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  position: fixed;
+  top: 5px;
+  left: 50%;
+  box-sizing: border-box;
+  outline: currentColor;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 0;
+  width: 100%;
+
+  transform: translate(-50%, 38px);
+
+  background-color: transparent;
+  z-index: 100;
+  transition: transform 0.3s ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
+  .burgerOpenNavigation {
+    top: 30px;
+  }
+}
+
+.burgerHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-left: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .burgerHeader {
+    gap: 38px;
+    margin-left: 0px;
+  }
+}
+
+.userNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 38px 16px 92px 16px;
+
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.64px;
+  color: var(--yellow-color);
+}
+
+@media screen and (min-width: 768px) {
+  .userNav {
+    padding: 0px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .userNav {
+    padding: 0px 16px 0px 16px;
+  }
+}

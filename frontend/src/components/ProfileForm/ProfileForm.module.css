@@ -1,0 +1,235 @@
+.section {
+  position: relative;
+  width: 100%;
+
+  margin-top: 80px;
+  padding: 200px 8px 25px 8px;
+
+  border-radius: 40px;
+  background-color: #fff;
+  box-shadow: 3px 8px 14px 0px #88c6fd30;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 24px;
+    padding: 20px 75px 20px 20px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 20px 24px 20px 16px;
+  }
+}
+
+.boxSimulation {
+  composes: section;
+
+  display: grid;
+  place-items: center;
+  width: 264px;
+  height: 240px;
+
+  @media screen and (min-width: 768px) {
+    width: 609px;
+    height: 223px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 340px;
+    height: 473px;
+  }
+}
+
+.boxInputs {
+  position: static;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row-reverse;
+    align-items: flex-startp;
+    gap: 70px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    flex-direction: column;
+    gap: 60px;
+  }
+}
+
+.avatar {
+  position: absolute;
+  top: -43px;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  @media screen and (min-width: 768px) {
+    position: static;
+    transform: none;
+  }
+
+  @media screen and (min-width: 1280px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.profileInput {
+  position: relative;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+  align-self: flex-start;
+  gap: 16px;
+
+  @media screen and (min-width: 768px) {
+    gap: 10px;
+  }
+}
+
+.flexContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+
+  @media screen and (min-width: 768px) {
+    gap: 16px;
+  }
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.56px;
+  color: var(--unnamed, #111);
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    letter-spacing: 0.72px;
+  }
+}
+
+.input {
+  width: 190px;
+
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.48px;
+  color: var(--unnamed, #111);
+
+  padding: 4px 12px;
+  border-radius: 20px;
+  outline: none;
+  border: 1px solid rgba(84, 173, 255, 1);
+
+  @media screen and (min-width: 768px) {
+    width: 255px;
+
+    font-size: 16px;
+    letter-spacing: 0.64px;
+  }
+}
+
+.ErrorMessage {
+  color: red;
+  font-size: 12px;
+}
+
+.centerError {
+  text-align: center;
+  color: red;
+}
+
+/* ------- Base Btn ------- */
+
+.baseBtn {
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  opacity: 0.75;
+  cursor: pointer;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ------- Save Btn ------- */
+
+.saveBtn {
+  composes: baseBtn;
+
+  margin-top: 90px;
+  margin-left: auto;
+  width: 248px;
+  padding: 5px;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.56px;
+  color: var(--unnamed, #fef9f9);
+
+  border-radius: 40px;
+  background-color: var(--unnamed, #54adff);
+
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+    width: 255px;
+  }
+}
+.saveBtn:hover,
+.saveBtn:focus {
+  opacity: 1;
+  box-shadow: rgba(100, 100, 111, 0.2);
+}
+
+/* ------- Edit Btn ------- */
+
+.editBtn {
+  composes: baseBtn;
+
+  position: absolute;
+  top: -25px;
+  right: 14px;
+  transform: translate(0, -100%);
+
+  @media screen and (min-width: 768px) {
+    top: 18px;
+    right: 18px;
+    transform: translate(0, 0);
+  }
+}
+.editBtn:hover,
+.editBtn:focus {
+  opacity: 1;
+  box-shadow: rgba(100, 100, 111, 0.2);
+}
+
+/* ------- Close Edit Btn ------- */
+
+.closeEditBtn {
+  composes: editBtn;
+}
+.closeEditBtn:hover,
+.closeEditBtn:focus {
+  opacity: 1;
+  box-shadow: rgba(100, 100, 111, 0.2);
+}
+
+/* 
+  
+
+  @media screen and (min-width: 768px) {
+
+  }
+
+
+  @media screen and (min-width: 1280px) {
+
+  } 
+  
+  */

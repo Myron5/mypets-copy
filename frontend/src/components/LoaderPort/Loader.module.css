@@ -1,0 +1,22 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(43, 43, 43, 0.1);
+  /* backdrop-filter: blur(4px); */
+
+  z-index: 9999;
+}
+
+@media screen and (min-width: 768px) {
+  .overlay {
+    background: rgba(43, 43, 43, 0.1);
+    /* backdrop-filter: none; */
+  }
+}
+

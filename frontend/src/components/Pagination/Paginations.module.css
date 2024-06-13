@@ -1,0 +1,18 @@
+.pagContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 117px;
+}
+
+@media screen and (min-width: 768px) {
+  .pagContainer {
+    padding-bottom: 209px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .pagContainer {
+    padding-bottom: 112px;
+  }
+}
