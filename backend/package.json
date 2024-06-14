@@ -2,7 +2,7 @@
   "name": "final-project-node",
   "version": "0.0.0",
   "private": false,
-  "homepage": ".",
+  "homepage": "https://mypet.up.railway.app",
   "scripts": {
     "test": "jest",
     "start": "cross-env NODE_ENV=production node ./server.js",
