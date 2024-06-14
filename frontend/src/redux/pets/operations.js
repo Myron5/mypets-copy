@@ -1,11 +1,8 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { noticeCategories } from 'constants/noticeCategories';
-// import axios from 'axios';
 import { instance } from 'service/api/api';
 
 const { SELL, LOSTFOUND, FORFREE, MYPET, FAVORITE } = noticeCategories;
-
-// axios.defaults.baseURL = 'https://final-project-node-5vh7.onrender.com';
 
 export const fetchPets = createAsyncThunk(
   'pets/fetchAll',

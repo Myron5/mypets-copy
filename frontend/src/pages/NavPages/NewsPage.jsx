@@ -11,14 +11,15 @@ import Paginations from 'components/Pagination/Paginations';
 import css from '../../components/Cards/News/NewsList/NewsItems/NewsItems.module.css';
 
 const NewsPage = () => {
+  const [isLoading, setIsLoading] = useState(false);
+
   const [newsItems, setNewsItems] = useState([]);
+  const [pages, setPages] = useState(0);
+  const [error, setError] = useState(null);
+
   const [searchNews, setSearchNews] = useState('pet');
   const [page, setPage] = useState(1);
   const [perPage] = useState(9);
-  const [pages, setPages] = useState(0);
-  const [infoRequest, setInfoRequest] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
 
   const handleSetPage = () => {
     setPage(1);
@@ -37,18 +38,14 @@ const NewsPage = () => {
   useEffect(() => {
     try {
       setIsLoading(true);
-      fetchNews(searchNews, page, perPage).then(
-        ({ articles, pages, info, message }) => {
-          articles && setNewsItems(articles);
-          pages && setPages(pages);
-          info && setInfoRequest(info);
-          message && setError(message);
-        }
-      );
-      setIsLoading(false);
+      fetchNews(searchNews, page, perPage).then(({ articles, pages, info }) => {
+        articles && setNewsItems(articles);
+        pages && setPages(pages);
+      });
     } catch (error) {
-      setIsLoading(false);
       setError(error);
+    } finally {
+      setIsLoading(false);
     }
   }, [searchNews, page, perPage]);
 
@@ -79,30 +76,19 @@ const NewsPage = () => {
             fontSize: '2rem',
           }}
         >
-          {error}
+          {error?.message}
         </p>
       )}
+
       {!isLoading && (
         <>
           <NewsList news={newsItems} />
-          {newsItems.length !== 0 ? (
+          {newsItems.length !== 0 && (
             <Paginations
               currentPage={page}
               totalPages={pages}
               handlePaginationChange={handlePageChange}
             />
-          ) : (
-            <p
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                padding: '20px',
-                fontSize: '2rem',
-              }}
-            >
-              {infoRequest}
-            </p>
           )}
         </>
       )}

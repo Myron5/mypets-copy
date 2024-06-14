@@ -8,8 +8,8 @@
   "consumes": ["application/json", "multipart/form-data"],
   "produces": ["application/json"],
   "servers": [
-    { "url": "https://final-project-node-5vh7.onrender.com" },
-    { "url": "http://localhost:3003" }
+    { "url": "https://mypet.up.railway.app" },
+    { "url": "http://localhost:3000" }
   ],
   "tags": [
     { "name": "User", "description": "Authorization endpoints" },
@@ -808,6 +808,27 @@
         }
       }
     },
+    "/news": {
+      "get": {
+        "tags": ["Notice"],
+        "description": "Get an array of api-news (Public)",
+        "responses": {
+          "200": {
+            "description": "Return json of news but from API",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/responses/SponsorsRespons"
+                }
+              }
+            }
+          },
+          "500": {
+            "$ref": "#/components/responses/ServerError"
+          }
+        }
+      }
+    },
     "/sponsors.json": {
       "get": {
         "tags": ["Public"],
@@ -1374,6 +1395,116 @@
               "type": "string",
               "example": "nyt://article/8d29f1fc-d146-509d-8ceb-5a5b17d7886b"
             }
+          }
+        }
+      },
+      "NewsApiRespons": {
+        "type": "object",
+        "properties": {
+          "articles": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "uri": {
+                  "type": "string",
+                  "example": "8177665344"
+                },
+                "lang": {
+                  "type": "string",
+                  "example": "eng"
+                },
+                "isDuplicate": {
+                  "type": "boolean",
+                  "example": true
+                },
+                "date": {
+                  "type": "string",
+                  "example": "2024-06-14"
+                },
+                "time": {
+                  "type": "string",
+                  "example": "11:20:44"
+                },
+                "dateTime": {
+                  "type": "string",
+                  "example": "2024-06-14T11:20:44Z"
+                },
+                "dateTimePub": {
+                  "type": "string",
+                  "example": "2024-06-14T11:19:29Z"
+                },
+                "dataType": {
+                  "type": "string",
+                  "example": "news"
+                },
+                "sim": {
+                  "type": "number",
+                  "example": 0
+                },
+                "url": {
+                  "type": "string",
+                  "example": "https://www.thecambodianews.net/news/274409451/chemco-group-celebrates-chairman-ram-saraogi-lifetime-achievement-award-for-pioneering-plastic-packaging-innovations"
+                },
+                "title": {
+                  "type": "string",
+                  "example": "Chemco Group Celebrates Chairman Ram Saraogi's Lifetime Achievement Award for Pioneering Plastic Packaging Innovations"
+                },
+                "body": {
+                  "type": "string",
+                  "example": "India PR Distribution\\n\\nMumbai (Maharashtra) [India], June 14: Chemco Group...\n"
+                },
+                "source": {
+                  "type": "object",
+                  "properties": {
+                    "uri": {
+                      "type": "string",
+                      "example": "thecambodianews.net"
+                    },
+                    "dataType": {
+                      "type": "string",
+                      "example": "news"
+                    },
+                    "title": {
+                      "type": "string",
+                      "example": "The Cambodia News"
+                    }
+                  }
+                },
+                "authors": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "example": []
+                },
+                "image": {
+                  "type": "string",
+                  "example": "https://cdn.bignewsnetwork.com/YWQ2OTY3ZmYtMDQ.jpg"
+                },
+                "eventUri": {
+                  "type": "string",
+                  "nullable": true,
+                  "example": null
+                },
+                "sentiment": {
+                  "type": "number",
+                  "example": 0.3098039215686275
+                },
+                "wgt": {
+                  "type": "integer",
+                  "example": 456060044
+                },
+                "relevance": {
+                  "type": "number",
+                  "example": 1
+                }
+              }
+            }
+          },
+          "pages": {
+            "type": "integer",
+            "example": 3929
           }
         }
       },

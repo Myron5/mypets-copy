@@ -1,3 +1,5 @@
+const axios = require("axios")
+
 const { Notice } = require("../models/notice")
 const { User } = require("../models/user")
 const { Types } = require("mongoose")
@@ -213,6 +215,37 @@ const toggleNoticeFavorite = async (req, res) => {
   })
 }
 
+const getNews = async (req, res) => {
+  const API_NEWS_URL = "https://eventregistry.org/api/v1/article/getArticles"
+  const YOUR_API_KEY = "77852f88-58cb-4ab5-a399-b12e44588c59"
+
+  const fetchNews = async (searchNews, page, perPage) => {
+    const searchParams = new URLSearchParams({
+      action: "getArticles",
+      keyword: searchNews,
+      articlesPage: page,
+      articlesCount: perPage,
+      articlesSortBy: "date",
+      articlesSortByAsc: false,
+      articlesArticleBodyLen: 1000,
+      resultType: "articles",
+      dataType: ["news"],
+      lang: "eng",
+      apiKey: YOUR_API_KEY,
+    })
+
+    const data = await axios.get(`${API_NEWS_URL}?${searchParams}`)
+    return data
+  }
+
+  const { searchNews, page, perPage } = req.query
+  const data = await fetchNews(searchNews, page, perPage)
+  return {
+    articles: data.articles.results,
+    pages: data.articles.pages,
+  }
+}
+
 module.exports = {
   getAll: ctrlWrapper(getAll),
   getMyPets: ctrlWrapper(getMyPets),
@@ -222,4 +255,5 @@ module.exports = {
   add: ctrlWrapper(add),
   deleteById: ctrlWrapper(deleteById),
   toggleNoticeFavorite: ctrlWrapper(toggleNoticeFavorite),
+  getNews: ctrlWrapper(getNews),
 }

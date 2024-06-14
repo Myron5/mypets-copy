@@ -48,4 +48,6 @@ router.post(
   ctrl.toggleNoticeFavorite
 )
 
+router.get("/news", ctrl.getNews)
+
 module.exports = router
