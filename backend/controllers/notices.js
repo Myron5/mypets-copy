@@ -18,8 +18,13 @@ const {
 } = require("../helpers")
 const { noticeCategories } = require("../constants")
 
-const { CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET } =
-  process.env
+const {
+  CLOUDINARY_CLOUD_NAME,
+  CLOUDINARY_API_KEY,
+  CLOUDINARY_API_SECRET,
+  API_NEWS_URL,
+  API_NEWS_KEY,
+} = process.env
 cloudinary.config({
   cloud_name: CLOUDINARY_CLOUD_NAME,
   api_key: CLOUDINARY_API_KEY,
@@ -216,9 +221,6 @@ const toggleNoticeFavorite = async (req, res) => {
 }
 
 const getNews = async (req, res) => {
-  const API_NEWS_URL = "https://eventregistry.org/api/v1/article/getArticles"
-  const YOUR_API_KEY = "77852f88-58cb-4ab5-a399-b12e44588c59"
-
   const fetchNews = async (searchNews, page, perPage) => {
     const searchParams = new URLSearchParams({
       action: "getArticles",
@@ -231,7 +233,7 @@ const getNews = async (req, res) => {
       resultType: "articles",
       dataType: ["news"],
       lang: "eng",
-      apiKey: YOUR_API_KEY,
+      apiKey: API_NEWS_KEY,
     })
 
     const data = await axios.get(`${API_NEWS_URL}?${searchParams}`)
