@@ -111,12 +111,12 @@ const RegisterPage = () => {
                   {error && (
                     <p className={css.FormRegister__Text}>
                       Problem with email verify link?
-                      <a
+                      <span
                         className={css.FormRegister__Link}
                         onClick={() => resentEmail(formik.values.email)}
                       >
                         Send to email again
-                      </a>
+                      </span>
                     </p>
                   )}
                 </Form>
