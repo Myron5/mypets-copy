@@ -235,7 +235,7 @@ const getNews = async (req, res) => {
     lang: "eng",
     apiKey: API_NEWS_KEY,
   })
-  const { data } = await axios.get(`${API_NEWS_URL}?${searchParams}`)
+  let { data } = await axios.get(`${API_NEWS_URL}?${searchParams}`)
   let status = 200
   if (data?.error) {
     data = { message: data.error }
