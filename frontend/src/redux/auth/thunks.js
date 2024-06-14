@@ -32,7 +32,7 @@ export const austOperationThunk = createAsyncThunk(
 
     if (endpoint === 'resent-email') {
       try {
-        const data = await instance.post(`users/${endpoint}`, userInfo);
+        const data = await instance.post(`users/verify`, userInfo);
         return data;
       } catch (error) {
         const { response } = error;
