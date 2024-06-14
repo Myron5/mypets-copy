@@ -15,6 +15,8 @@ router.get("/", validateParams(schemas.paramsNoticeSchema), ctrl.getAll)
 
 router.get("/mypets", authenticate, ctrl.getMyPets)
 
+router.get("/news", ctrl.getNews)
+
 router.get(
   "/favoriteads",
   authenticate,
@@ -47,7 +49,5 @@ router.post(
   isValidId,
   ctrl.toggleNoticeFavorite
 )
-
-router.get("/news", ctrl.getNews)
 
 module.exports = router
