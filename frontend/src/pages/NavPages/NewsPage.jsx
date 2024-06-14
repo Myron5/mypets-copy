@@ -40,7 +40,8 @@ const NewsPage = () => {
     (async () => {
       try {
         setIsLoading(true);
-        const { articles, pages } = await fetchNews(query, page, newsPerPage);
+        const { data } = await fetchNews(query, page, newsPerPage);
+        const { articles, pages } = data;
         articles && setNewsItems(articles?.results);
         pages && setPages(pages);
       } catch (error) {

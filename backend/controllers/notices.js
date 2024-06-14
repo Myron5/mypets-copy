@@ -46,7 +46,6 @@ const getAll = async (req, res) => {
 
   const date = { dateone, datetwo, datethree }
   const findObject = objForSearch({ category, sex, date, query })
-  console.log(findObject)
   const sort = { createdAt: -1 }
   const skip = (page - 1) * limit
 
@@ -222,9 +221,6 @@ const toggleNoticeFavorite = async (req, res) => {
 
 const getNews = async (req, res) => {
   const { query = "pet", page = 1, limit = 9 } = req.query
-
-  console.log("QUERY0", req.query)
-  console.log("QUERY", query, page, limit)
 
   const searchParams = new URLSearchParams({
     action: "getArticles",
