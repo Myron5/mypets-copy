@@ -818,7 +818,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/responses/SponsorsRespons"
+                  "$ref": "#/components/responses/NewsApiRespons"
                 }
               }
             }
