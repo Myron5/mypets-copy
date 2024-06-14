@@ -236,8 +236,12 @@ const getNews = async (req, res) => {
     apiKey: API_NEWS_KEY,
   })
   const { data } = await axios.get(`${API_NEWS_URL}?${searchParams}`)
-  console.log()
-  res.json(data)
+  let status = 200
+  if (data?.error) {
+    data = { message: data.error }
+    status = 500
+  }
+  res.status(status).json(data)
 }
 
 module.exports = {
