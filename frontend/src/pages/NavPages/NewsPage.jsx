@@ -35,13 +35,12 @@ const NewsPage = () => {
     }
   };
 
-  useEffect(() => {
+  useEffect(async () => {
     try {
       setIsLoading(true);
-      fetchNews(searchNews, page, perPage).then(({ articles, pages }) => {
-        articles && setNewsItems(articles?.results);
-        pages && setPages(pages);
-      });
+      const { articles, pages } = await fetchNews(searchNews, page, perPage);
+      articles && setNewsItems(articles?.results);
+      pages && setPages(pages);
     } catch (error) {
       setError(error);
     } finally {
