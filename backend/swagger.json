@@ -1502,10 +1502,10 @@
               }
             }
           },
-          "pages": {
-            "type": "integer",
-            "example": 3929
-          }
+          "totalResults": { "type": "integer", "example": 38246 },
+          "page": { "type": "integer", "example": 1 },
+          "count": { "type": "integer", "example": 100 },
+          "pages": { "type": "integer", "example": 383 }
         }
       },
       "ValidationError": {
