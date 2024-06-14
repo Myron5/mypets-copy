@@ -30,7 +30,10 @@ export const stepTwoValidationSchema = Yup.object().shape({
     .min(2, '2 symbols minimum')
     .max(16, '16 symbols maximum')
     .required('Pet name is required'),
-  date: Yup.date().required('Birth date is required').nullable().max(new Date(), 'Birth date cannot be later than the current date'),
+  date: Yup.date()
+    .required('Birth date is required')
+    .nullable()
+    .max(new Date(), 'Birth date cannot be later than the current date'),
   typePet: Yup.string().required('Type is required'),
 });
 
@@ -56,16 +59,16 @@ export const stepThreeValidationSchema = Yup.object().shape({
     }
     return true;
   }),
-  location: Yup.string().test(
-    'locationRequired',
-    'Location is required.',
-    function (value) {
+  location: Yup.string()
+    .min(3, 'Location must be at least 3 characters long')
+    .matches(/^[^\d\s]+$/, 'Location must not contain numbers or spaces')
+    .test('locationRequired', 'Location is required.', function (value) {
       if (petCategory.includes(this.parent.category)) {
         return this.parent.category !== 'your pet' ? !!value : true;
       }
       return true;
-    }
-  ),
+    }),
+
   price: Yup.number().test(
     'priceRequired',
     'Price is required and must be greater than 0 for sell category.',
