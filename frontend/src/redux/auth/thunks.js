@@ -29,6 +29,16 @@ export const austOperationThunk = createAsyncThunk(
         return thunkAPI.rejectWithValue(error);
       }
     }
+
+    if (endpoint === 'resent-email') {
+      try {
+        const data = await instance.post(`users/${endpoint}`, userInfo);
+        return data;
+      } catch (error) {
+        const { response } = error;
+        return thunkAPI.rejectWithValue(response);
+      }
+    }
     if (endpoint === 'verify') {
       try {
         const { data } = await instance.get(`users/${endpoint}/${urlToken}`);
@@ -37,6 +47,7 @@ export const austOperationThunk = createAsyncThunk(
         return thunkAPI.rejectWithValue(error);
       }
     }
+
     if (endpoint === 'google') {
       try {
         const { data } = await instance.get(`auth/${endpoint}`);

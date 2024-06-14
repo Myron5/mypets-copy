@@ -5,21 +5,19 @@
   border-radius: 20px;
   background-color: white;
   box-shadow: 3px 8px 14px 0px rgba(136, 198, 253, 0.19);
-  
 }
 @media screen and (min-width: 768px) {
   .ContainerForm {
-  width: 608px;
-  margin-top: 80px;
-  margin-right: auto;
-  margin-left: auto;
+    width: 608px;
+    margin-top: 80px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
 .Form {
   text-align: center;
 }
-
 
 .ContainerForm__Title {
   text-align: center;
@@ -31,10 +29,10 @@
 }
 
 @media screen and (min-width: 768px) {
-  .ContainerForm__Title{
-  font-size: 36px;
-  padding-top: 60px;
-  margin-bottom: 40px;
+  .ContainerForm__Title {
+    font-size: 36px;
+    padding-top: 60px;
+    margin-bottom: 40px;
   }
 }
 .ContainerForm__Imput {
@@ -55,8 +53,8 @@
 }
 @media screen and (min-width: 768px) {
   .ContainerForm__Imput {
-  width: 458px;
-  margin-bottom: 32px;
+    width: 458px;
+    margin-bottom: 32px;
   }
 }
 
@@ -88,8 +86,8 @@
 
 @media screen and (min-width: 768px) {
   .ImputContainer {
-  width: 458px;
-  margin-bottom: 32PX;
+    width: 458px;
+    margin-bottom: 32px;
   }
 }
 
@@ -113,9 +111,9 @@
 }
 @media screen and (min-width: 768px) {
   .FormRegister__Button {
-  width: 458px;
-  margin-top: 20px;
-  margin-bottom: 16px; 
+    width: 458px;
+    margin-top: 20px;
+    margin-bottom: 16px;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -135,20 +133,20 @@
   margin-left: auto;
   margin-right: auto;
   width: 256px;
-    height: 48px;
-    margin-bottom: 8px;
-    padding: 10px 28px;
-    border-radius: 40px;
-    background-color: var(--white-color);
-    font-family: Manrope;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: normal;
-    letter-spacing: 0.8px;
-    color: var(--blue-color);
-    border: 1px solid var(--blue-color);
-    cursor: pointer;
-    outline: none;
+  height: 48px;
+  margin-bottom: 8px;
+  padding: 10px 28px;
+  border-radius: 40px;
+  background-color: var(--white-color);
+  font-family: Manrope;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.8px;
+  color: var(--blue-color);
+  border: 1px solid var(--blue-color);
+  cursor: pointer;
+  outline: none;
 }
 @media screen and (min-width: 768px) {
   .FormRegister__Button_Login_Google {
@@ -165,7 +163,6 @@
   color: var(--white-color);
   background: var(--gradient-blue);
 }
-
 
 .FormRegister__Button_Login {
   width: 256px;
@@ -188,8 +185,8 @@
 
 @media screen and (min-width: 768px) {
   .FormRegister__Button_Login {
-  width: 458px;
-  margin-top: 0px;
+    width: 458px;
+    margin-top: 0px;
   }
 }
 
@@ -197,7 +194,6 @@
 .FormRegister__Button_Login:focus {
   background: var(--gradient-blue);
 }
-
 
 .FormRegister__Text {
   text-align: center;
@@ -207,13 +203,6 @@
   letter-spacing: 0.48px;
   color: var(--grey-color);
   padding-bottom: 40px;
-  
-}
-
-@media screen and (min-width: 768px) {
-  .FormRegister__Text {
-  padding-bottom: 60px;
-  }
 }
 
 .FormRegister__Link {
@@ -239,22 +228,22 @@
 }
 
 .ErrorText {
- color: red;
- font-size: 10px;
- padding-right: 28px;
- padding-left: 28px;
- margin-top: 2px;
- margin-bottom: 2px;
+  color: red;
+  font-size: 10px;
+  padding-right: 28px;
+  padding-left: 28px;
+  margin-top: 2px;
+  margin-bottom: 2px;
 
- text-align: initial;
+  text-align: initial;
 }
 
 @media screen and (min-width: 768px) {
   .ErrorText {
-  margin-top: 4px;
-  padding-left: 86px;
-  padding-right: 86px;
-  margin-bottom: 16px;
+    margin-top: 4px;
+    padding-left: 86px;
+    padding-right: 86px;
+    margin-bottom: 16px;
   }
 }
 .ErrorTextPassword {
@@ -267,14 +256,14 @@
   text-align: initial;
 }
 
- @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .ErrorTextPassword {
-  margin-top: 4px;
-  padding-left: 86px;
-  padding-right: 86px;
-  margin-bottom: 16px;
+    margin-top: 4px;
+    padding-left: 86px;
+    padding-right: 86px;
+    margin-bottom: 16px;
   }
- }
+}
 
 .ErrorTextInput {
   outline: none;
@@ -295,7 +284,7 @@
 
 @media screen and (min-width: 768px) {
   .ErrorTextInput {
-  width: 458px;
+    width: 458px;
   }
 }
 
@@ -315,6 +304,6 @@
 
 @media screen and (min-width: 768px) {
   .ErrorPasswordInput {
-  width: 458px;
+    width: 458px;
   }
 }

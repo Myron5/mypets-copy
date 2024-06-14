@@ -31,9 +31,14 @@ const RegisterPage = () => {
     if (!error) {
       return;
     }
-
     notify.error(error.data.message);
   }, [error]);
+
+  const resentEmail = email => {
+    dispatch(
+      austOperationThunk({ endpoint: 'resent-email', userInfo: { email } })
+    );
+  };
 
   return (
     <>
@@ -97,11 +102,23 @@ const RegisterPage = () => {
                   </button>
 
                   <p className={css.FormRegister__Text}>
-                    Already have an account?{' '}
+                    Already have an account?
                     <NavLink to={`/login`} className={css.FormRegister__Link}>
                       Login
                     </NavLink>
                   </p>
+
+                  {error && (
+                    <p className={css.FormRegister__Text}>
+                      Problem with email verify link?
+                      <a
+                        className={css.FormRegister__Link}
+                        onClick={() => resentEmail(formik.values.email)}
+                      >
+                        Send to email again
+                      </a>
+                    </p>
+                  )}
                 </Form>
                 {modalOpen && <ModalRegister />}
               </div>
