@@ -7,12 +7,11 @@ import { App } from 'components/App';
 import './index.css';
 import { store, persistor } from 'redux/store';
 
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Provider store={store} >
-      <PersistGate loading={null}  persistor={persistor}/>
-      <BrowserRouter basename="/team-project-2">
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor} />
+      <BrowserRouter>
         <App />
       </BrowserRouter>
     </Provider>
