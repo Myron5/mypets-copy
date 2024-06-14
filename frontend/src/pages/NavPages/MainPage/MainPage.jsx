@@ -24,7 +24,7 @@ const MainPage = () => {
             Take good care of your small pets
           </h1>
           <img
-            srcSet={(petsMobile1x, petsMobile2x)}
+            srcSet={`${petsMobile1x} 1x, ${petsMobile2x} 2x`}
             src={petsMobile1x}
             alt="pets"
           />
@@ -36,7 +36,7 @@ const MainPage = () => {
             Take good care of your small pets
           </h1>
           <img
-            srcSet={(petsTablet1x, petsTablet2x)}
+            srcSet={`${petsTablet1x} 1x, ${petsTablet2x} 2x`}
             src={petsTablet1x}
             alt="pets"
           />
@@ -51,7 +51,7 @@ const MainPage = () => {
 
           <img
             loading="lazy"
-            srcSet={(petsDesktop1x, petsDesktop2x)}
+            srcSet={`${petsDesktop1x} 1x, ${petsDesktop2x} 2x`}
             src={petsDesktop1x}
             alt="pets"
             align="right"

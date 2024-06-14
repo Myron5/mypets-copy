@@ -1,4 +1,3 @@
-
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchMyPets, deletePet } from 'redux/pets/operations';
 import { getMyPets, getError } from 'redux/pets/selectors';
@@ -15,8 +14,6 @@ const MyPetsList = () => {
 
   const notices = useSelector(getMyPets);
   const errorMyPets = useSelector(getError);
-
-  
 
   const onDelete = deleteId => {
     return async () => {
@@ -45,7 +42,7 @@ const MyPetsList = () => {
       <div className={css.centerBox}>
         <img
           className={css.noAdsImg}
-          srcSet={(noAds1x, noAds2x)}
+          srcSet={`${noAds1x} 1x, ${noAds2x} 2x`}
           src={noAds1x}
           alt="pets"
         />

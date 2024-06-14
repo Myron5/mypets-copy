@@ -18,61 +18,61 @@ const PageNotFound = () => {
   const notFoundSmall = useMediaQuery('(max-width: 767px)');
   const notFoundMedium = useMediaQuery(
     '(min-width: 768px) and (max-width: 1279px)'
-    );
-    const notFoundBig = useMediaQuery('(min-width: 1280px)');
-  
-  
+  );
+  const notFoundBig = useMediaQuery('(min-width: 1280px)');
+
   return (
     <BgContainer>
-    <Container >
-      <div className={css.pageNotFound}>
-      <p className={css.textError}>
-        <span className={css.span}>Ooops! </span>
-        This page not found :(
-      </p>
-      <div className={css.notFoundImg}>
-        {notFoundSmall && (
-          <>
-          <img
-          loading="lazy"
-          srcSet={(notFoundMob1x, notFoundMob2x)}
-          scr={notFoundMob1x}
-          alt="not-found-page"
-          />
-          </>
-        )}
+      <Container>
+        <div className={css.pageNotFound}>
+          <p className={css.textError}>
+            <span className={css.span}>Ooops! </span>
+            This page not found :(
+          </p>
+          <div className={css.notFoundImg}>
+            {notFoundSmall && (
+              <>
+                <img
+                  loading="lazy"
+                  srcSet={`${notFoundMob1x} 1x, ${notFoundMob2x} 2x`}
+                  scr={notFoundMob1x}
+                  alt="not-found-page"
+                />
+              </>
+            )}
 
-        {notFoundMedium && (
-          <>
-          <img
-          loading="lazy"
-          srcSet={(notFoundTab1x, notFoundTab2x)}
-          scr={notFoundTab1x}
-          alt="not-found-page"
-          />
-          </>
-        )}
+            {notFoundMedium && (
+              <>
+                <img
+                  loading="lazy"
+                  srcSet={`${notFoundTab1x} 1x, ${notFoundTab2x} 2x`}
+                  scr={notFoundTab1x}
+                  alt="not-found-page"
+                />
+              </>
+            )}
 
-        {notFoundBig && (
-          <>
-          <img
-          loading="lazy"
-          srcSet={(notFoundDesk1x, notFoundDesk2x)}
-          scr={notFoundDesk1x}
-          alt="not-found-page"
-          />
-          </>
-        )}
-      </div>
-      <Link to="/">
-      <button type='button' className={css.pageNotFoundBtn} onClick="/">To main page
-      <svg width="24" height="24">
-        <use href={`${sprite}#icon-paw-login`}></use>
-      </svg> 
-      </button>
-      </Link>
-      </div>
-    </Container>
+            {notFoundBig && (
+              <>
+                <img
+                  loading="lazy"
+                  srcSet={`${notFoundDesk1x} 1x, ${notFoundDesk2x} 2x`}
+                  scr={notFoundDesk1x}
+                  alt="not-found-page"
+                />
+              </>
+            )}
+          </div>
+          <Link to="/">
+            <button type="button" className={css.pageNotFoundBtn} onClick="/">
+              To main page
+              <svg width="24" height="24">
+                <use href={`${sprite}#icon-paw-login`}></use>
+              </svg>
+            </button>
+          </Link>
+        </div>
+      </Container>
     </BgContainer>
   );
 };
