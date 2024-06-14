@@ -812,6 +812,11 @@
       "get": {
         "tags": ["Notice"],
         "description": "Get an array of api-news (Public)",
+        "parameters": [
+          { "$ref": "#/components/parameters/query" },
+          { "$ref": "#/components/parameters/page" },
+          { "$ref": "#/components/parameters/limit" }
+        ],
         "responses": {
           "200": {
             "description": "Return json of news but from API",
@@ -1147,7 +1152,6 @@
         "name": "limit",
         "in": "query",
         "type": "integer",
-        "default": 12,
         "example": 12,
         "description": "Number of elements to be returned (pagination)"
       }

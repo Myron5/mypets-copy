@@ -221,12 +221,16 @@ const toggleNoticeFavorite = async (req, res) => {
 }
 
 const getNews = async (req, res) => {
-  const { searchNews, page, perPage } = req.query
+  const { query = "pet", page = 1, limit = 9 } = req.query
+
+  console.log("QUERY0", req.query);
+  console.log("QUERY", query , page, limit))
+
   const searchParams = new URLSearchParams({
     action: "getArticles",
-    keyword: searchNews,
+    keyword: query,
     articlesPage: page,
-    articlesCount: perPage,
+    articlesCount: limit,
     articlesSortBy: "date",
     articlesSortByAsc: false,
     articlesArticleBodyLen: 1000,

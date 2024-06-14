@@ -10,6 +10,8 @@ import LoaderPet from '../../components/LoaderPet/LoaderPet';
 import Paginations from 'components/Pagination/Paginations';
 import css from '../../components/Cards/News/NewsList/NewsItems/NewsItems.module.css';
 
+const newsPerPage = 9;
+
 const NewsPage = () => {
   const [isLoading, setIsLoading] = useState(false);
 
@@ -17,9 +19,8 @@ const NewsPage = () => {
   const [pages, setPages] = useState(0);
   const [error, setError] = useState(null);
 
-  const [searchNews, setSearchNews] = useState('pet');
+  const [query, setQuery] = useState('pet');
   const [page, setPage] = useState(1);
-  const [perPage] = useState(9);
 
   const handleSetPage = () => {
     setPage(1);
@@ -29,7 +30,7 @@ const NewsPage = () => {
     if (searchTerm.trim() !== '') {
       handleSetPage();
       const correctedSearch = searchTerm.toLowerCase();
-      setSearchNews(correctedSearch);
+      setQuery(correctedSearch);
     } else {
       notify.error('Please, Enter the correct request');
     }
@@ -38,7 +39,7 @@ const NewsPage = () => {
   useEffect(async () => {
     try {
       setIsLoading(true);
-      const { articles, pages } = await fetchNews(searchNews, page, perPage);
+      const { articles, pages } = await fetchNews(query, page, newsPerPage);
       articles && setNewsItems(articles?.results);
       pages && setPages(pages);
     } catch (error) {
@@ -46,7 +47,7 @@ const NewsPage = () => {
     } finally {
       setIsLoading(false);
     }
-  }, [searchNews, page, perPage]);
+  }, [query, page, limit]);
 
   useEffect(() => {
     if (newsItems.length === 0) setPages(0);
@@ -57,7 +58,7 @@ const NewsPage = () => {
   };
 
   const onClearSearch = () => {
-    setSearchNews('pet');
+    setQuery('pet');
   };
 
   return (
