@@ -1,7 +1,8 @@
 {
   "name": "final-project-node",
   "version": "0.0.0",
-  "private": true,
+  "private": false,
+  "homepage": ".",
   "scripts": {
     "test": "jest",
     "start": "cross-env NODE_ENV=production node ./server.js",
