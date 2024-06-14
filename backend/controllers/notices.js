@@ -221,27 +221,22 @@ const toggleNoticeFavorite = async (req, res) => {
 }
 
 const getNews = async (req, res) => {
-  const fetchNews = async (searchNews, page, perPage) => {
-    const searchParams = new URLSearchParams({
-      action: "getArticles",
-      keyword: searchNews,
-      articlesPage: page,
-      articlesCount: perPage,
-      articlesSortBy: "date",
-      articlesSortByAsc: false,
-      articlesArticleBodyLen: 1000,
-      resultType: "articles",
-      dataType: ["news"],
-      lang: "eng",
-      apiKey: API_NEWS_KEY,
-    })
-
-    const data = await axios.get(`${API_NEWS_URL}?${searchParams}`)
-    return data
-  }
-
   const { searchNews, page, perPage } = req.query
-  const data = await fetchNews(searchNews, page, perPage)
+  const searchParams = new URLSearchParams({
+    action: "getArticles",
+    keyword: searchNews,
+    articlesPage: page,
+    articlesCount: perPage,
+    articlesSortBy: "date",
+    articlesSortByAsc: false,
+    articlesArticleBodyLen: 1000,
+    resultType: "articles",
+    dataType: ["news"],
+    lang: "eng",
+    apiKey: API_NEWS_KEY,
+  })
+  const { data } = await axios.get(`${API_NEWS_URL}?${searchParams}`)
+  console.log()
   res.json(data)
 }
 
