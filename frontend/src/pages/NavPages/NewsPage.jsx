@@ -38,8 +38,8 @@ const NewsPage = () => {
   useEffect(() => {
     try {
       setIsLoading(true);
-      fetchNews(searchNews, page, perPage).then(({ articles, pages, info }) => {
-        articles && setNewsItems(articles);
+      fetchNews(searchNews, page, perPage).then(({ articles, pages }) => {
+        articles && setNewsItems(articles?.results);
         pages && setPages(pages);
       });
     } catch (error) {
