@@ -11,7 +11,7 @@ const transporter = nodemailer.createTransport({
 })
 
 const sendEmail = async data => {
-  const email = { ...data, from: process.env.MAIL_USER }
+  const email = { ...data, from: process.env.EMAIL_FROM }
   await this.transporter.sendMail({ ...this.emailOptions })
   return true
 }
