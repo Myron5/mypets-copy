@@ -36,21 +36,25 @@ const NewsPage = () => {
     }
   };
 
-  useEffect(async () => {
-    try {
-      setIsLoading(true);
-      const { articles, pages } = await fetchNews(query, page, newsPerPage);
-      articles && setNewsItems(articles?.results);
-      pages && setPages(pages);
-    } catch (error) {
-      setError(error);
-    } finally {
-      setIsLoading(false);
-    }
+  useEffect(() => {
+    (async () => {
+      try {
+        setIsLoading(true);
+        const { articles, pages } = await fetchNews(query, page, newsPerPage);
+        articles && setNewsItems(articles?.results);
+        pages && setPages(pages);
+      } catch (error) {
+        setError(error);
+      } finally {
+        setIsLoading(false);
+      }
+    })();
   }, [query, page]);
 
   useEffect(() => {
-    if (newsItems.length === 0) setPages(0);
+    if (newsItems.length === 0) {
+      setPages(0);
+    }
   }, [pages, newsItems.length]);
 
   const handlePageChange = pageNumber => {
