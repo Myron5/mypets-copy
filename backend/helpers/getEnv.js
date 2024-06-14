@@ -9,8 +9,6 @@ const {
 } = process.env
 
 const getEnv = () => {
-  let BASE_URL
-  let BASE_URL_FRONTEND
   switch (NODE_ENV) {
     case "production":
       return {
