@@ -242,7 +242,7 @@ const getNews = async (req, res) => {
 
   const { searchNews, page, perPage } = req.query
   const data = await fetchNews(searchNews, page, perPage)
-  return data
+  res.json(data)
 }
 
 module.exports = {
