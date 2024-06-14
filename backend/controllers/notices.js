@@ -223,8 +223,8 @@ const toggleNoticeFavorite = async (req, res) => {
 const getNews = async (req, res) => {
   const { query = "pet", page = 1, limit = 9 } = req.query
 
-  console.log("QUERY0", req.query);
-  console.log("QUERY", query , page, limit))
+  console.log("QUERY0", req.query)
+  console.log("QUERY", query, page, limit)
 
   const searchParams = new URLSearchParams({
     action: "getArticles",

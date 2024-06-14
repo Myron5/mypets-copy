@@ -47,7 +47,7 @@ const NewsPage = () => {
     } finally {
       setIsLoading(false);
     }
-  }, [query, page, limit]);
+  }, [query, page]);
 
   useEffect(() => {
     if (newsItems.length === 0) setPages(0);
