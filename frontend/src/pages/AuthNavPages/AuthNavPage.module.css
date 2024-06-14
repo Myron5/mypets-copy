@@ -213,6 +213,7 @@
   letter-spacing: 0.48px;
   text-decoration-line: underline;
   margin-left: 2px;
+  cursor: pointer;
 }
 
 .Button__EyeClosedIcon {
