@@ -38,9 +38,9 @@ const EditBtn = ({ handleOnClick }) => {
   );
 };
 
-const SaveBtn = () => {
+const SaveBtn = ({ handleOnClick }) => {
   return (
-    <button type="submit" className={css.saveBtn}>
+    <button className={css.saveBtn} onClick={handleOnClick}>
       Save
     </button>
   );
@@ -242,7 +242,7 @@ const ProfileForm = () => {
               {isEditing && (
                 <div className={css.item}>
                   <div className={css.flexContainer}>
-                    <SaveBtn />
+                    <SaveBtn handleOnClick={() => onSubmit(values)} />
                   </div>
                 </div>
               )}
