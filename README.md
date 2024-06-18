@@ -10,3 +10,8 @@
 - Verify your email.
 - View and edit your profile, add your pets.
 - Use the website on different devices.
+
+
+
+https://github.com/Myron5/mypets-copy/assets/96477512/d336fbbb-36f5-44fa-90a2-49ca04e629a7
+
